@@ -1,0 +1,32 @@
+# Raw datasets and downloaded audio are too large for GitHub.
+data/
+
+# Local Python environments and caches.
+.venv/
+venv/
+env/
+notebook/.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local editor and OS files.
+.vscode/
+.DS_Store
+Thumbs.db
+~$*
+
+# Working revisions and render checks kept outside the submission package.
+_archive_document_revisions_and_checks/
+documentation/_archive_document_revisions_and_checks/
+documentation/_render_check_*/
+documentation/_pdf_render_*/
+
+# Temporary notebook/runtime files.
+*.tmp
+*.log
+
+# Browser/runtime state accidentally produced during PDF export or notebook rendering.
+software artefacts/logs/
+software artefacts/logs/chrome_profile/
+software artefacts/logs/**/chrome_profile/

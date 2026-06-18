@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-06-17 03:18:39",
+  "notebook": "50_external_song_batch_windowed_inference.ipynb",
+  "external_audio_dir": "E:\\SCHOOL\\Masters\\Capstone_FMA_Project\\data\\external_audio_batch",
+  "output_dir": "E:\\SCHOOL\\Masters\\Capstone_FMA_Project\\outputs\\notebook50_external_song_batch_windowed",
+  "songs_attempted": 60,
+  "successful_songs": 60,
+  "error_songs": 0,
+  "window_seconds": 15,
+  "max_windows": 8,
+  "window_selection_mode": "evenly_spaced",
+  "min_window_votes": 2,
+  "stage1_threshold": 0.2,
+  "external_manifest_xlsx": "E:\\SCHOOL\\Masters\\Capstone_FMA_Project\\data\\external_audio_batch\\external_audio_manifest.xlsx",
+  "external_manifest_csv": "E:\\SCHOOL\\Masters\\Capstone_FMA_Project\\data\\external_audio_batch\\external_audio_manifest_source.csv",
+  "manifest_source_used": "E:\\SCHOOL\\Masters\\Capstone_FMA_Project\\data\\external_audio_batch\\external_audio_manifest_source.csv",
+  "manifest_rows": 60,
+  "manifest_overall_metrics": {
+    "songs_evaluated_with_manifest": 60,
+    "top1_hit_rate": 0.21666666666666667,
+    "top3_hit_rate": 0.6666666666666666,
+    "top5_hit_rate": 0.8333333333333334,
+    "stable_prediction_hit_rate": 0.6666666666666666,
+    "exact_expected_name_top1_rate": 0.21666666666666667,
+    "avg_main_score": 0.5117996712525685,
+    "low_confidence_rate": 0.48333333333333334
+  },
+  "outputs": {
+    "song_summary": "E:\\SCHOOL\\Masters\\Capstone_FMA_Project\\outputs\\notebook50_external_song_batch_windowed\\notebook50_external_song_summary.csv",
+    "candidate_scores_topn": "E:\\SCHOOL\\Masters\\Capstone_FMA_Project\\outputs\\notebook50_external_song_batch_windowed\\notebook50_external_candidate_scores_topn.csv",
+    "window_predictions": "E:\\SCHOOL\\Masters\\Capstone_FMA_Project\\outputs\\notebook50_external_song_batch_windowed\\notebook50_external_window_predictions.csv",
+    "errors": "E:\\SCHOOL\\Masters\\Capstone_FMA_Project\\outputs\\notebook50_external_song_batch_windowed\\notebook50_external_errors.csv",
+    "manifest_evaluation": "E:\\SCHOOL\\Masters\\Capstone_FMA_Project\\outputs\\notebook50_external_song_batch_windowed\\notebook50_external_manifest_evaluation.csv",
+    "manifest_evaluation_by_genre": "E:\\SCHOOL\\Masters\\Capstone_FMA_Project\\outputs\\notebook50_external_song_batch_windowed\\notebook50_external_manifest_evaluation_by_genre.csv",
+    "manifest_evaluation_xlsx": ""
+  }
+}

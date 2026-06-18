@@ -1,0 +1,7 @@
+expected_primary_genre,songs,top1_hit_rate,top3_hit_rate,top5_hit_rate,stable_prediction_hit_rate,exact_expected_name_top1_rate,avg_main_score,low_confidence_rate
+Electronic,10,0.2,0.9,0.9,0.9,0.2,0.5166030496358871,0.5
+Experimental,10,0.6,1.0,1.0,1.0,0.6,0.5027613788843155,0.5
+Folk,10,0.2,0.7,0.7,0.7,0.2,0.49767949879169465,0.6
+Hip-Hop,10,0.1,0.4,0.7,0.4,0.1,0.48038868308067323,0.7
+Pop,10,0.0,0.0,0.7,0.0,0.0,0.5274502694606781,0.3
+Rock,10,0.2,1.0,1.0,1.0,0.2,0.5459151476621628,0.3

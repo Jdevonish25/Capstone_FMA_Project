@@ -1,0 +1,56 @@
+{
+  "created_at": "2026-06-17 03:16:05",
+  "notebook": "49_final_fma_test_split_batch_evaluation.ipynb",
+  "true_label_source": "genres_all",
+  "metrics_summary": [
+    {
+      "metric_group": "micro",
+      "precision": 0.37360178970917224,
+      "recall": 0.5661016949152542,
+      "f1": 0.4501347708894879,
+      "support": 295
+    },
+    {
+      "metric_group": "macro",
+      "precision": 0.04707193960878172,
+      "recall": 0.07706523256523257,
+      "f1": 0.05150630976791211,
+      "support": 295
+    },
+    {
+      "metric_group": "samples",
+      "precision": 0.3886190476190476,
+      "recall": 0.6454761904761905,
+      "f1": 0.44548329448329455,
+      "support": 100
+    }
+  ],
+  "additional_metrics": {
+    "hamming_loss": 0.0272,
+    "jaccard_samples": 0.30071031746031746,
+    "num_successful_tracks": 100,
+    "num_error_tracks": 0,
+    "num_labels": 150,
+    "stage1_threshold": 0.2,
+    "structured_weight": 0.1,
+    "audio_weight": 0.9,
+    "low_confidence_threshold": 0.5,
+    "low_confidence_count": 12,
+    "top1_hit_rate": 0.72,
+    "hit_any_at_1": 0.72,
+    "top3_hit_rate": 0.98,
+    "hit_any_at_3": 0.98,
+    "top5_hit_rate": 0.99,
+    "hit_any_at_5": 0.99
+  },
+  "output_files": {
+    "prediction_summary": "E:\\SCHOOL\\Masters\\Capstone_FMA_Project\\outputs\\notebook49_fma_test_batch_evaluation\\fma_test_prediction_summary.csv",
+    "topk_predictions": "E:\\SCHOOL\\Masters\\Capstone_FMA_Project\\outputs\\notebook49_fma_test_batch_evaluation\\fma_test_topk_predictions.csv",
+    "all_label_scores": "E:\\SCHOOL\\Masters\\Capstone_FMA_Project\\outputs\\notebook49_fma_test_batch_evaluation\\fma_test_all_label_scores.csv",
+    "metrics_summary": "E:\\SCHOOL\\Masters\\Capstone_FMA_Project\\outputs\\notebook49_fma_test_batch_evaluation\\fma_test_metrics_summary.csv",
+    "per_label_metrics": "E:\\SCHOOL\\Masters\\Capstone_FMA_Project\\outputs\\notebook49_fma_test_batch_evaluation\\fma_test_per_label_metrics.csv",
+    "low_confidence_cases": "E:\\SCHOOL\\Masters\\Capstone_FMA_Project\\outputs\\notebook49_fma_test_batch_evaluation\\fma_test_low_confidence_cases.csv",
+    "error_cases": "E:\\SCHOOL\\Masters\\Capstone_FMA_Project\\outputs\\notebook49_fma_test_batch_evaluation\\fma_test_error_cases.csv",
+    "runtime_log": "E:\\SCHOOL\\Masters\\Capstone_FMA_Project\\outputs\\notebook49_fma_test_batch_evaluation\\fma_test_runtime_log.csv"
+  }
+}
