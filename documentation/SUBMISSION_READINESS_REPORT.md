@@ -8,7 +8,7 @@ This report summarizes the readiness state of the capstone project folder locate
 
 The core submission artefacts are present and organized. The final technical paper has been regenerated as both DOCX and PDF, the management report has been created as both DOCX and PDF, the graded proposal has been copied into the documentation folder, the notebook sequence is present, and the final evaluation outputs from Notebook 49 and Notebook 50 are available.
 
-The software artefacts folder has also been created. It contains PDF exports of all notebooks with code and outputs, plus a manifest describing each exported notebook.
+The software artefacts folder has also been created. It contains PDF exports of all notebooks with code and outputs, plus a manifest describing each exported notebook. A Streamlit deployment layer has also been added for presentation. The live demo is available at `https://capstone-fma-genre-demo.streamlit.app/`, and the deployment rationale is documented in `documentation/STREAMLIT_DEPLOYMENT_DOCUMENTATION.md`.
 
 ## Confirmed Key Files
 
@@ -58,6 +58,7 @@ Notebook 49 and Notebook 50 were executed into artefact copies before export bec
 - `submission_file_manifest.csv`
 - `submission_folder_summary.csv`
 - `software artefacts/notebook_pdf_manifest.csv`
+- `STREAMLIT_DEPLOYMENT_DOCUMENTATION.md`
 
 ## Submission Notes
 
@@ -72,4 +73,6 @@ Some earlier notebooks and processed artefacts retain historical filenames conta
 ## Reproducibility and Demo Support
 
 A reproducible package list has been added at `requirements_capstone.txt`. A model presentation plan has been added at `documentation/DEMO_PRESENTATION_PLAN.md`. A cleaner submission manifest excluding the local virtual environment and generated Chrome profile files has been added at `documentation/submission_file_manifest_clean.csv`.
+
+The live Streamlit demo is supported by `streamlit_app.py`, `streamlit_assets/`, `requirements.txt`, `packages.txt`, `runtime.txt`, and `.python-version`. The deployment uses the audio CNN branch for uploaded songs because external files do not carry the structured FMA metadata required by the hybrid branch.
 

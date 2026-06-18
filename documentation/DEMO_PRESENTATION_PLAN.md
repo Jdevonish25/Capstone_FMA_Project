@@ -5,11 +5,13 @@ Supervisor: Dr. Sean Miller
 
 ## Current Submission Position
 
-The capstone folder already contains the main submission materials: final technical paper, management report, graded proposal, notebooks, exported notebook PDFs, trained model artefacts, final evaluation outputs, external batch audio manifest, and submission readiness files. The final model evidence is strongest in Notebook 49 and Notebook 50, so the demo should focus on those results and the full-song windowed inference workflow.
+The capstone folder already contains the main submission materials: final technical paper, management report, graded proposal, notebooks, exported notebook PDFs, trained model artefacts, final evaluation outputs, external batch audio manifest, and submission readiness files. The final model evidence is strongest in Notebook 49 and Notebook 50, so the demo focuses on those results and the full-song windowed inference workflow.
 
-## Recommended Demo Option
+Live demo: https://capstone-fma-genre-demo.streamlit.app/
 
-The recommended presentation format is a small Streamlit application.
+## Selected Demo Option
+
+The selected presentation format is a small Streamlit application.
 
 Streamlit is the best fit because it can present the project like a professional dashboard while still using the existing Python inference code, TensorFlow/Keras model files, joblib structured model files, librosa audio processing, and CSV/JSON outputs. It also supports file upload, tables, charts, status messages, and explanatory panels without needing a separate frontend/backend build.
 
@@ -59,21 +61,23 @@ Streamlit is the best fit because it can present the project like a professional
 - `outputs/notebook50_external_song_batch_windowed/notebook50_external_manifest_evaluation_by_genre.csv`
 - `outputs/notebook50_external_song_batch_windowed/notebook50_external_song_summary.csv`
 
-## Remaining Demo Build Tasks
+## Deployment Files Now Included
 
-1. Extract the reusable inference functions from Notebook 50 into a Python module under `scripts/`.
-2. Build `demo/streamlit_app.py` around those functions.
-3. Add a small `demo/README_DEMO.md` with setup and run commands.
-4. Test with at least two songs from the existing external batch folder.
-5. Capture screenshots for possible inclusion in the final presentation.
+- `streamlit_app.py`
+- `streamlit_assets/`
+- `requirements.txt`
+- `packages.txt`
+- `runtime.txt`
+- `.python-version`
+- `documentation/STREAMLIT_DEPLOYMENT_DOCUMENTATION.md`
 
 ## Suggested Run Command
 
-After the demo app is created, the expected command should be:
+For local testing, the expected command is:
 
 ```powershell
 cd E:\SCHOOL\Masters\Capstone_FMA_Project
-python -m streamlit run demo\streamlit_app.py
+python -m streamlit run streamlit_app.py
 ```
 
 ## Notes for Presentation

@@ -14,6 +14,17 @@ often subjective, and one song can fit more than one category. For that reason,
 the project focuses on ranked predictions, such as Top 1, Top 3, and Top 5
 genre suggestions.
 
+## Live Demo
+
+The project has a Streamlit demo for non-technical review:
+
+https://capstone-fma-genre-demo.streamlit.app/
+
+The demo lets a user upload a song and view ranked genre suggestions. It uses
+the final audio model and reports Top 1, Top 3, and Top 5 predictions. It should
+be read as a demonstration of the final workflow, not as a replacement for the
+technical paper or notebook evidence.
+
 ## What The Project Does
 
 The project:
@@ -24,6 +35,7 @@ The project:
 - compares structured data, audio-based models, and hybrid models;
 - tests the final model on FMA test songs;
 - tests the model again on external open-licence songs;
+- deploys a small Streamlit app for browser-based demonstration;
 - produces final reports, notebooks, model files, and evaluation results.
 
 ## Main Result
@@ -40,7 +52,7 @@ person should still review the final genre choice.
 ## Main Folders
 
 - `documentation/` contains the final technical paper, management report,
-  proposal, and readiness notes.
+  proposal, deployment documentation, and readiness notes.
 - `notebook/` contains the full notebook work from the start of the project to
   the final testing stage.
 - `software artefacts/` contains PDF versions of the notebooks with code and
@@ -56,9 +68,11 @@ For a quick understanding, start with:
 1. `documentation/FMA_Capstone_Management_Report_Julian_Devonish.pdf`
 2. `documentation/FMA_Capstone_Final_Technical_Paper_Julian_Devonish.pdf`
 3. `documentation/SUBMISSION_READINESS_REPORT.md`
+4. `documentation/STREAMLIT_DEPLOYMENT_DOCUMENTATION.md`
 
 The management report gives the easiest summary. The technical paper explains
-the full project in more detail.
+the full project in more detail. The Streamlit deployment document explains how
+the final model was presented as a live browser demo.
 
 ## Important Notebooks
 
