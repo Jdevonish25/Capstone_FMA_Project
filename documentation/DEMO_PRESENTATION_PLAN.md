@@ -9,6 +9,8 @@ The capstone folder already contains the main submission materials: final techni
 
 Live demo: https://capstone-fma-genre-demo.streamlit.app/
 
+The first screen now defines FMA and explains Top 1, Top 3, and Top 5 before showing the final project results. This change was made after supervisor feedback because a non-technical viewer should understand the result labels immediately.
+
 ## Selected Demo Option
 
 The selected presentation format is a small Streamlit application.
@@ -26,7 +28,8 @@ Streamlit is the best fit because it can present the project like a professional
 ## Proposed Streamlit Demo Structure
 
 1. Project Overview
-   - Short summary of the problem, dataset, final system, and 163-genre strategy.
+   - Short summary of the problem, FMA dataset, final system, and 163-genre strategy.
+   - Plain explanation of Top 1, Top 3, and Top 5.
    - Display final Notebook 49 and Notebook 50 headline metrics.
 
 2. Upload Song Demo

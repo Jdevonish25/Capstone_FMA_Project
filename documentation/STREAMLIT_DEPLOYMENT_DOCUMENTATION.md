@@ -16,6 +16,8 @@ The Streamlit deployment was added after the main modelling work had already bee
 
 This deployment should be read as a demonstration layer, not as a new modelling experiment. The trained model, candidate labels, threshold, genre metadata, and final evaluation logic come from the existing capstone pipeline. The app wraps that work in a simpler interface so that the main idea can be shown quickly: the model is most useful when it returns Top-1, Top-3, and Top-5 genre suggestions rather than one final genre label.
 
+After supervisor feedback, the opening section of the app was revised to explain two points before any results appear. First, it defines FMA as the Free Music Archive, an open music research dataset containing audio tracks, genre labels, and metadata. Second, it explains Top-1, Top-3, and Top-5 in plain language. Top-1 is the model's first choice. Top-3 means the accepted genre appears anywhere in the first three suggestions. Top-5 means it appears anywhere in the first five suggestions. This change was made because a demo viewer should not need prior knowledge of the project vocabulary before reading the results.
+
 ## Why Streamlit Was Selected
 
 Streamlit was selected because the final project needed a lightweight way to present the model. A full web application with a separate backend, database, authentication layer, and hosted API would have added extra engineering work that was not central to the capstone question. The main academic question was not whether a production software platform could be built. It was whether audio-based and hybrid modelling could rank likely music genres in a useful way.
@@ -48,6 +50,8 @@ The app follows the same practical idea as Notebook 50. A full uploaded song is 
 Each window is scored by the trained audio CNN. The app then averages the genre scores across windows and ranks the candidate labels. This design was selected because the audio model was trained on 15-second inputs. Using full-song windows respects that training design while still allowing more of the uploaded song to influence the final prediction.
 
 The app reports Top-1, Top-3, and Top-5 genre suggestions. It also reports window-level information and a confidence label. A low-confidence warning appears when the highest mean score is below 0.50. This warning is important because the final project evidence does not support blind automatic tagging. The model is better understood as a ranked review tool.
+
+The deployed interface now uses the heading "Top Genre Prediction" for the main output. This wording is more direct than only showing a table of scores. It tells a non-technical viewer where to look first, while still keeping the Top-3 and Top-5 lists visible for interpretation. The design choice reflects the final evaluation evidence: the first-ranked genre matters, but the strongest project result is the model's ability to place the accepted genre near the top of a ranked list.
 
 ## Final Model Evidence Used to Justify the Demo
 

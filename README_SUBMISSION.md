@@ -53,7 +53,7 @@ Live app:
 
 `https://capstone-fma-genre-demo.streamlit.app/`
 
-The deployed app allows a reviewer to upload an audio file and view ranked genre predictions. It uses the final audio CNN branch because uploaded external songs do not naturally include the structured FMA metadata needed by the hybrid branch. This is explained in `documentation/STREAMLIT_DEPLOYMENT_DOCUMENTATION.md`.
+The deployed app allows a reviewer to upload an audio file and view ranked genre predictions. The opening section defines FMA and explains Top 1, Top 3, and Top 5 before showing the project metrics. It uses the final audio CNN branch because uploaded external songs do not naturally include the structured FMA metadata needed by the hybrid branch. This is explained in `documentation/STREAMLIT_DEPLOYMENT_DOCUMENTATION.md`.
 
 ## Final Evaluation Outputs
 

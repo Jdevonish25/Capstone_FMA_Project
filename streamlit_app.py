@@ -29,6 +29,18 @@ HOP_LENGTH = 1024
 MAX_FRAMES = int(np.ceil((WINDOW_SECONDS * SR) / HOP_LENGTH)) + 1
 LOW_CONFIDENCE_THRESHOLD = 0.50
 
+FMA_EXPLANATION = (
+    "FMA means the Free Music Archive, an open music research dataset used to "
+    "train and test this project. It contains audio tracks, genre labels, and "
+    "metadata that are commonly used for music information retrieval research."
+)
+
+TOP_K_EXPLANATION = (
+    "Top 1 is the model's first choice. Top 3 means the correct or expected "
+    "genre appears anywhere in the first three suggestions. Top 5 means it "
+    "appears anywhere in the first five suggestions."
+)
+
 
 st.set_page_config(
     page_title="FMA Genre Prediction Demo",
@@ -218,19 +230,24 @@ def metric_card(label, value):
 def show_project_results():
     summaries = load_project_summaries()
 
-    st.subheader("Project Results")
+    st.subheader("Project Results From The Final Test")
+    st.write(
+        "These results show how often the model placed the accepted genre near "
+        "the top of its ranked list. The project uses ranked prediction because "
+        "music often fits more than one genre."
+    )
     cols = st.columns(4)
 
     fma = summaries.get("fma", {})
     additional = fma.get("additional_metrics", {})
     with cols[0]:
-        metric_card("FMA Top 1", f"{additional.get('top1_hit_rate', 0) * 100:.1f}%")
+        metric_card("Top 1 on FMA test songs", f"{additional.get('top1_hit_rate', 0) * 100:.1f}%")
     with cols[1]:
-        metric_card("FMA Top 3", f"{additional.get('top3_hit_rate', 0) * 100:.1f}%")
+        metric_card("Top 3 on FMA test songs", f"{additional.get('top3_hit_rate', 0) * 100:.1f}%")
     with cols[2]:
-        metric_card("FMA Top 5", f"{additional.get('top5_hit_rate', 0) * 100:.1f}%")
+        metric_card("Top 5 on FMA test songs", f"{additional.get('top5_hit_rate', 0) * 100:.1f}%")
     with cols[3]:
-        metric_card("FMA Test Songs", f"{additional.get('num_successful_tracks', 0)}")
+        metric_card("FMA songs tested", f"{additional.get('num_successful_tracks', 0)}")
 
     external = summaries.get("external", {}).get("manifest_overall_metrics", {})
     st.caption(
@@ -244,9 +261,27 @@ def show_project_results():
 def main():
     st.title("Music Genre Prediction Demo")
     st.write(
-        "Upload a song and the project model will return ranked genre suggestions. "
-        "This demo is designed as a review tool, so the Top 3 and Top 5 results are "
-        "just as important as the first prediction."
+        "Upload a song and the model will suggest likely genres. The main result "
+        "is the Top Genre Prediction, followed by Top 3 and Top 5 suggestions for "
+        "review."
+    )
+
+    with st.container(border=True):
+        st.markdown("### What this demo means")
+        st.write(FMA_EXPLANATION)
+        st.write(TOP_K_EXPLANATION)
+        st.write(
+            "In plain terms, the model is not only judged by whether its first "
+            "guess is correct. It is also judged by whether the right genre is "
+            "close to the top of the list."
+        )
+
+    with st.expander("Why the demo uses 15-second windows", expanded=False):
+        st.write(
+            "The model was trained on 15-second audio clips. For a full song, the "
+            "app samples several 15-second windows, predicts each window, and then "
+            "combines those scores. This lets more of the song influence the final "
+            "ranked genre list."
     )
 
     show_project_results()
@@ -264,6 +299,11 @@ def main():
             "The model splits the song into 15-second windows, predicts genres for each "
             "window, and then averages the scores. A low confidence flag means the top "
             "score is not strong enough to treat as a final answer without review."
+        )
+        st.write(TOP_K_EXPLANATION)
+        st.write(
+            "Top 3 window votes count how often a genre appears inside the top three "
+            "predictions across the analysed windows."
         )
 
     if not uploaded_file:
@@ -305,8 +345,14 @@ def main():
             "song should be reviewed before assigning a final label."
         )
 
-    st.write("**Top 3 suggestions:**", top3_names)
-    st.write("**Top 5 suggestions:**", top5_names)
+    st.subheader("Top Genre Prediction")
+    st.write(
+        f"The strongest single prediction is **{top1['genre']}**. The broader "
+        "ranked list should also be reviewed because songs can contain more than "
+        "one genre signal."
+    )
+    st.write("**Top 3 genre suggestions:**", top3_names)
+    st.write("**Top 5 genre suggestions:**", top5_names)
 
     display_cols = [
         "rank",

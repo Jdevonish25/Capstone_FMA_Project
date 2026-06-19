@@ -20,10 +20,11 @@ The project has a Streamlit demo for non-technical review:
 
 https://capstone-fma-genre-demo.streamlit.app/
 
-The demo lets a user upload a song and view ranked genre suggestions. It uses
-the final audio model and reports Top 1, Top 3, and Top 5 predictions. It should
-be read as a demonstration of the final workflow, not as a replacement for the
-technical paper or notebook evidence.
+The demo lets a user upload a song and view ranked genre suggestions. It now
+explains FMA and the Top 1, Top 3, and Top 5 measures at the top of the page, so
+a viewer can understand the results without reading the technical paper first.
+It should be read as a demonstration of the final workflow, not as a replacement
+for the technical paper or notebook evidence.
 
 ## What The Project Does
 
