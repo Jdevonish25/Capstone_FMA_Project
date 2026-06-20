@@ -17,6 +17,7 @@ Supervisor: Dr. Sean Miller
 - `documentation/FMA_Capstone_Management_Report_Julian_Devonish.pdf`
 - `documentation/Capstone_Project_Proposal_Graded.pdf`
 - `documentation/STREAMLIT_DEPLOYMENT_DOCUMENTATION.md`
+- `documentation/PROJECT_DATA_DICTIONARY.md`
 - `documentation/SUBMISSION_READINESS_REPORT.md`
 - `documentation/submission_key_file_check.csv`
 - `documentation/submission_file_manifest_clean.csv`
@@ -46,6 +47,7 @@ Supervisor: Dr. Sean Miller
 7. Review Notebook 49 for final FMA test-split evaluation.
 8. Review Notebook 50 for external open-licence song batch evaluation.
 9. Review the Streamlit deployment documentation and live app for the browser-based demonstration.
+10. Review the data dictionary for definitions of scores, metrics, confidence levels, and output columns.
 
 ## Live Streamlit Demonstration
 

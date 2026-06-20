@@ -70,10 +70,12 @@ For a quick understanding, start with:
 2. `documentation/FMA_Capstone_Final_Technical_Paper_Julian_Devonish.pdf`
 3. `documentation/SUBMISSION_READINESS_REPORT.md`
 4. `documentation/STREAMLIT_DEPLOYMENT_DOCUMENTATION.md`
+5. `documentation/PROJECT_DATA_DICTIONARY.md`
 
 The management report gives the easiest summary. The technical paper explains
 the full project in more detail. The Streamlit deployment document explains how
-the final model was presented as a live browser demo.
+the final model was presented as a live browser demo. The data dictionary
+explains the code fields, metrics, confidence labels, and output columns.
 
 ## Important Notebooks
 

@@ -59,6 +59,7 @@ Notebook 49 and Notebook 50 were executed into artefact copies before export bec
 - `submission_folder_summary.csv`
 - `software artefacts/notebook_pdf_manifest.csv`
 - `STREAMLIT_DEPLOYMENT_DOCUMENTATION.md`
+- `PROJECT_DATA_DICTIONARY.md`
 
 ## Submission Notes
 
@@ -75,4 +76,6 @@ Some earlier notebooks and processed artefacts retain historical filenames conta
 A reproducible package list has been added at `requirements_capstone.txt`. A model presentation plan has been added at `documentation/DEMO_PRESENTATION_PLAN.md`. A cleaner submission manifest excluding the local virtual environment and generated Chrome profile files has been added at `documentation/submission_file_manifest_clean.csv`.
 
 The live Streamlit demo is supported by `streamlit_app.py`, `streamlit_assets/`, `requirements.txt`, `packages.txt`, `runtime.txt`, and `.python-version`. The deployment uses the audio CNN branch for uploaded songs because external files do not carry the structured FMA metadata required by the hybrid branch.
+
+A project data dictionary has been added at `documentation/PROJECT_DATA_DICTIONARY.md`. It explains the coding fields, output tables, metric names, confidence bands, Top-k measures, and window-voting terms used in the final notebooks and demo app.
 
