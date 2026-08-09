@@ -52,8 +52,8 @@ person should still review the final genre choice.
 
 ## Main Folders
 
-- `documentation/` contains the final technical paper, management report,
-  proposal, deployment documentation, and readiness notes.
+- `documentation/` contains the final technical paper, management report, code
+  documentation, proposal, deployment documentation, and readiness notes.
 - `notebook/` contains the full notebook work from the start of the project to
   the final testing stage.
 - `software artefacts/` contains PDF versions of the notebooks with code and
@@ -68,14 +68,17 @@ For a quick understanding, start with:
 
 1. `documentation/FMA_Capstone_Management_Report_Julian_Devonish.pdf`
 2. `documentation/FMA_Capstone_Final_Technical_Paper_Julian_Devonish.pdf`
-3. `documentation/SUBMISSION_READINESS_REPORT.md`
-4. `documentation/STREAMLIT_DEPLOYMENT_DOCUMENTATION.md`
-5. `documentation/PROJECT_DATA_DICTIONARY.md`
+3. `documentation/FMA_Capstone_Code_Documentation_Julian_Devonish.pdf`
+4. `documentation/SUBMISSION_READINESS_REPORT.md`
+5. `documentation/STREAMLIT_DEPLOYMENT_DOCUMENTATION.md`
+6. `documentation/PROJECT_DATA_DICTIONARY.md`
 
 The management report gives the easiest summary. The technical paper explains
-the full project in more detail. The Streamlit deployment document explains how
-the final model was presented as a live browser demo. The data dictionary
-explains the code fields, metrics, confidence labels, and output columns.
+the full project in more detail. The code documentation explains the notebook
+sequence, final output folders, and Streamlit app code. The Streamlit deployment
+document explains how the final model was presented as a live browser demo. The
+data dictionary explains the code fields, metrics, confidence labels, and output
+columns.
 
 ## Important Notebooks
 

@@ -61,7 +61,7 @@ The deployment design follows the evidence from Notebook 49 and Notebook 50.
 |---|---|---|---|
 | Notebook 49 | FMA processed test split | Top-1 hit-any = 72.0%, Top-3 hit-any = 98.0%, Top-5 hit-any = 99.0% | The model was strong when the test songs came from the same project data setting. This supports ranked suggestions on familiar-style audio. |
 | Notebook 49 | FMA processed test split | Micro F1 = 0.450, Samples F1 = 0.445, Macro F1 = 0.052 | The model handled common labels better than rare labels. The low Macro F1 shows why the app should avoid overclaiming rare subgenre certainty. |
-| Notebook 50 | External open-licence songs | Top-1 = 21.7%, Top-3 = 63.3%, Top-5 = 83.3% | External songs were harder, but the correct genre family often appeared within the ranked list. This supports a Top-k demo rather than a single-answer demo. |
+| Notebook 50 | External open-licence songs | Top-1 = 21.7%, Top-3 = 66.7%, Top-5 = 83.3% | External songs were harder, but the correct genre family often appeared within the ranked list. This supports a Top-k demo rather than a single-answer demo. |
 | Notebook 50 | External open-licence songs | Low-confidence rate = 48.3% | Many external songs needed caution. This supports the low-confidence warning shown in the deployed app. |
 
 These results explain the final interface. The app does not hide uncertainty. It displays ranked outputs because the final evidence suggests that genre ranking is more credible than single-label assignment. The difference between FMA test performance and external-song performance also explains why the app includes explanatory text for non-technical users.

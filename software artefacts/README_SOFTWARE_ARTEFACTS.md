@@ -2,6 +2,10 @@
 
 This folder contains PDF exports of the capstone notebooks with code and saved outputs.
 
+For a written explanation of the code structure, notebook sequence, final outputs, and Streamlit demo functions, use:
+
+`../documentation/FMA_Capstone_Code_Documentation_Julian_Devonish.pdf`
+
 ## Folders
 
 - `notebook_pdfs/`: PDF exports for all notebook artefacts.

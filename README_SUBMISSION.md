@@ -15,12 +15,12 @@ Supervisor: Dr. Sean Miller
 - `documentation/FMA_Capstone_Final_Technical_Paper_Julian_Devonish.pdf`
 - `documentation/FMA_Capstone_Management_Report_Julian_Devonish.docx`
 - `documentation/FMA_Capstone_Management_Report_Julian_Devonish.pdf`
+- `documentation/FMA_Capstone_Code_Documentation_Julian_Devonish.docx`
+- `documentation/FMA_Capstone_Code_Documentation_Julian_Devonish.pdf`
 - `documentation/Capstone_Project_Proposal_Graded.pdf`
 - `documentation/STREAMLIT_DEPLOYMENT_DOCUMENTATION.md`
 - `documentation/PROJECT_DATA_DICTIONARY.md`
 - `documentation/SUBMISSION_READINESS_REPORT.md`
-- `documentation/submission_key_file_check.csv`
-- `documentation/submission_file_manifest_clean.csv`
 - `software artefacts/notebook_pdfs/`
 - `software artefacts/notebook_pdf_manifest.csv`
 
@@ -40,14 +40,15 @@ Supervisor: Dr. Sean Miller
 
 1. Read the management report in `documentation/` for a concise decision-level summary.
 2. Read the final technical paper in `documentation/` for the full technical explanation.
-3. Review the graded proposal for approved scope alignment.
-4. Review Notebooks 23-24 for full genre inventory and multi-label preparation.
-5. Review Notebooks 34-38 for the Candidate-150 audio and hybrid benchmark.
-6. Review Notebooks 39-47 for the full taxonomy and rare-tail inference strategy.
-7. Review Notebook 49 for final FMA test-split evaluation.
-8. Review Notebook 50 for external open-licence song batch evaluation.
-9. Review the Streamlit deployment documentation and live app for the browser-based demonstration.
-10. Review the data dictionary for definitions of scores, metrics, confidence levels, and output columns.
+3. Read the code documentation in `documentation/` for the notebook, output, and Streamlit code map.
+4. Review the graded proposal for approved scope alignment.
+5. Review Notebooks 23-24 for full genre inventory and multi-label preparation.
+6. Review Notebooks 34-38 for the Candidate-150 audio and hybrid benchmark.
+7. Review Notebooks 39-47 for the full taxonomy and rare-tail inference strategy.
+8. Review Notebook 49 for final FMA test-split evaluation.
+9. Review Notebook 50 for external open-licence song batch evaluation.
+10. Review the Streamlit deployment documentation and live app for the browser-based demonstration.
+11. Review the data dictionary for definitions of scores, metrics, confidence levels, and output columns.
 
 ## Live Streamlit Demonstration
 
