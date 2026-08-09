@@ -30,7 +30,7 @@ Supervisor: Dr. Sean Miller
 - `models/` contains saved trained model artefacts.
 - `notebook/` contains the full notebook implementation sequence.
 - `outputs/` contains final Notebook 49 and Notebook 50 evaluation outputs.
-- `documentation/` contains the final paper, proposal, readiness report, and submission manifests.
+- `documentation/` contains the final technical paper, management report, code documentation, proposal, deployment documentation, data dictionary, and readiness report.
 - `software artefacts/` contains PDF exports of the notebooks with code and outputs.
 - `reports/` is reserved for report exports; final report outputs are stored in `documentation/`.
 - `scripts/` is reserved for reusable scripts; the main implementation is notebook-based.
@@ -57,6 +57,12 @@ Live app:
 `https://capstone-fma-genre-demo.streamlit.app/`
 
 The deployed app allows a reviewer to upload an audio file and view ranked genre predictions. The opening section defines FMA and explains Top 1, Top 3, and Top 5 before showing the project metrics. It uses the final audio CNN branch because uploaded external songs do not naturally include the structured FMA metadata needed by the hybrid branch. This is explained in `documentation/STREAMLIT_DEPLOYMENT_DOCUMENTATION.md`.
+
+## MongoDB Implementation Note
+
+MongoDB was implemented as part of the project data engineering layer. Notebook 04 created the first MongoDB pipeline, and Notebook 25 loaded the multi-label phase into the local `fma_capstone` database. The `genres_lookup` collection stored 163 genre records, and `tracks_multilabel` stored 81,574 track documents.
+
+The final modelling notebooks, evaluation outputs, and Streamlit demo use exported CSV, JSON, NumPy, and saved model artefacts rather than live MongoDB reads. This was done because repeated model training and audio inference were constrained by local CPU, memory, and disk I/O. In a fuller deployment, MongoDB would support track metadata lookup, genre hierarchy retrieval, prediction storage, and reviewer search.
 
 ## Final Evaluation Outputs
 

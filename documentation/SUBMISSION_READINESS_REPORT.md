@@ -82,3 +82,5 @@ A project data dictionary has been added at `documentation/PROJECT_DATA_DICTIONA
 
 A code documentation report has been added at `documentation/FMA_Capstone_Code_Documentation_Julian_Devonish.pdf`. It explains the notebook sequence, repository structure, final evaluation notebooks, output files, Streamlit functions, and review path for the submitted code.
 
+MongoDB was implemented as a data engineering and metadata-management layer in the notebook sequence. The local `fma_capstone` database stored `genres_lookup` and `tracks_multilabel` collections. The final evaluation notebooks and Streamlit app use exported files rather than live MongoDB reads because repeated audio inference, model loading, and notebook execution were constrained by local CPU, memory, and disk I/O. This design keeps the submitted artefacts reproducible while still documenting how MongoDB would support a fuller catalogue deployment.
+

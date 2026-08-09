@@ -43,6 +43,14 @@ The deployed app uses a small number of files from the final repository. The raw
 
 This table matters because it separates the deployed demonstration from the full research environment. The full capstone contains notebooks, processed data, model comparisons, and output artefacts. The deployed app uses only the subset needed to run a single-song prediction. That decision keeps the app smaller and easier to maintain.
 
+## MongoDB Role in the Project
+
+MongoDB was used in the project, but it was not used as the live data source for the deployed Streamlit app. Notebook 04 created the first MongoDB pipeline. Notebook 25 later loaded the multi-label phase into the local `fma_capstone` database, including `genres_lookup` for the 163-genre inventory and `tracks_multilabel` for 81,574 unified track records.
+
+The final modelling and deployment path used exported CSV, JSON, NumPy, and saved model artefacts instead of querying MongoDB during inference. This was a practical choice. The local machine already had to handle large audio files, model training, spectrogram generation, and repeated evaluation runs. Live database reads would have added extra I/O and resource pressure without improving the final prediction evidence.
+
+In a fuller production-style version, MongoDB would be useful as the catalogue layer. The app could query track metadata by `track_id`, retrieve genre hierarchy and candidate-label flags from `genres_lookup`, store prediction summaries in a new collection, and support reviewer searches by genre, confidence level, and evaluation batch.
+
 ## Inference Workflow Used by the App
 
 The app follows the same practical idea as Notebook 50. A full uploaded song is not forced into one model input. Instead, the app splits the audio into a maximum of eight evenly spaced 15-second windows. Each window is converted into a Mel-spectrogram using the same basic audio settings used in the final pipeline: 22,050 Hz sampling rate, 64 Mel bands, 2,048 FFT size, 1,024 hop length, and 15-second windows.

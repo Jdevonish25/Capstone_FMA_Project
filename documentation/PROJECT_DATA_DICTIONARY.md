@@ -512,6 +512,20 @@ This order avoids over-reading the first genre. The ranked list and window stabi
 
 These results should be read together. The FMA test split shows strong ranked performance inside the project data setting. The external test shows that new songs are harder, but the Top 3 and Top 5 lists still often contain acceptable genre matches.
 
+## MongoDB Collections and Exported Artefacts
+
+MongoDB was used as a metadata and label-management layer during the project. It was implemented locally in the `fma_capstone` database.
+
+| MongoDB item | Meaning |
+|---|---|
+| `fma_capstone` | Local MongoDB database created for the capstone metadata and label pipeline. |
+| `genres_lookup` | Collection containing 163 genre records, hierarchy fields, candidate-label flags, rare-tail flags, and inventory information. |
+| `tracks_multilabel` | Collection containing 81,574 unified track documents with track IDs, metadata, and multi-label genre arrays. |
+
+The final modelling notebooks, evaluation notebooks, and Streamlit app do not query MongoDB live. They use exported CSV, JSON, NumPy, and saved model artefacts. This was done to keep repeated evaluation and audio inference stable on local hardware, where CPU, memory, and disk I/O were practical constraints.
+
+In a larger deployment, MongoDB would be used to retrieve track metadata, maintain the genre hierarchy, store prediction summaries, and support reviewer search across genre, confidence, and evaluation fields.
+
 ## Short Glossary
 
 | Term | Plain meaning |

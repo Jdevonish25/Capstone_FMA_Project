@@ -50,6 +50,18 @@ showed useful ranking behaviour.
 In simple terms, the model is useful for narrowing down likely genres, but a
 person should still review the final genre choice.
 
+## MongoDB Note
+
+MongoDB was used during the project as a metadata and label-management layer.
+Notebook 04 created the first MongoDB pipeline, and Notebook 25 expanded this
+into the local `fma_capstone` database with `genres_lookup` and
+`tracks_multilabel` collections.
+
+The final notebooks and Streamlit demo use exported CSV, JSON, NumPy, and model
+files instead of live MongoDB queries. This kept the evaluation and demo stable
+on local hardware where repeated audio inference and model work were limited by
+CPU, memory, and disk I/O.
+
 ## Main Folders
 
 - `documentation/` contains the final technical paper, management report, code
